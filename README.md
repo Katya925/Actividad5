@@ -1,8 +1,6 @@
 # Actividad 5 — Clasificación de tumores mamarios
 
-Proyecto académico de clasificación binaria con **Regresión Logística** y **Random Forest**, utilizando el conjunto de datos **Breast Cancer Wisconsin (Diagnostic)** de Scikit-Learn. Incluye preparación de datos, búsqueda de hiperparámetros, evaluación comparativa y seguimiento de experimentos con MLflow.
-
-> **Alcance:** ejercicio educativo de aprendizaje automático. Los modelos no están validados para diagnóstico clínico.
+Proyecto de clasificación binaria con **Regresión Logística** y **Random Forest**, utilizando el conjunto de datos **Breast Cancer Wisconsin (Diagnostic)** de Scikit-Learn. Incluye preparación de datos, búsqueda de hiperparámetros, evaluación comparativa y seguimiento de experimentos con MLflow.
 
 ## 1. Datos
 
@@ -24,7 +22,7 @@ Proyecto académico de clasificación binaria con **Regresión Logística** y **
 
 ## 3. Reproducción del proyecto
 
-1. Abrir `Actividad5_corregida.ipynb` en Google Colab.
+1. Abrir `Actividad5.ipynb` en Google Colab.
 2. Instalar las dependencias; para MLflow ejecutar:
 
    ```python
@@ -42,11 +40,8 @@ Proyecto académico de clasificación binaria con **Regresión Logística** y **
    mlflow.set_experiment("Actividad5_Breast_Cancer_Clasificacion")
    ```
 
-4. Ejecutar las celdas en orden: carga y validación de datos; partición; definición de pipelines; entrenamiento y ajuste de ambos modelos; comparación y curvas ROC.
-5. Ejecutar la **celda adicional de evidencias** (celda 9, si fue incorporada) para consultar las ejecuciones reales de MLflow y exportar tablas.
-6. Guardar el notebook ejecutado, el archivo `mlflow.db`, los artefactos de MLflow y los archivos de evidencia. En Colab, estos archivos pueden perderse al terminar la sesión; descargarlos o respaldarlos en Drive.
-
-> **Importante:** la versión inicial del notebook utilizaba un backend de archivos para MLflow. Para reproducir la versión ajustada descrita aquí, verificar que la celda 2 haya sido cambiada a SQLite **antes de entrenar**. Cambiar el backend no migra automáticamente los experimentos previos.
+4. Ejecutar las celdas en orden: carga y validación de datos; partición; definición de pipelines; entrenamiento y ajuste de ambos modelos; comparación y curvas ROC; y generación de evidencias para consultar las ejecuciones reales de MLflow y exportar tablas.
+5. Guardar el notebook ejecutado, el archivo `mlflow.db`, los artefactos de MLflow y los archivos de evidencia. En Colab, estos archivos pueden perderse al terminar la sesión; descargarlos o respaldarlos en Drive.
 
 ## 4. Flujo de preparación y entrenamiento
 
@@ -112,7 +107,7 @@ No usar identificadores provisionales como `local_run`: seleccionar los `run_id`
 
 | Archivo o recurso | Uso |
 |---|---|
-| `Actividad5_corregida.ipynb` | Código, análisis y resultados. |
+| `Actividad5.ipynb` | Código, análisis y resultados. |
 | `dataset_raw.csv` | Copia de datos antes de la limpieza. |
 | `dataset_cleaned.csv` | Datos tras las reglas iniciales de limpieza; no necesariamente escalados. |
 | `CHANGELOG.md` | Historial de cambios, si fue generado y actualizado. |
@@ -125,7 +120,7 @@ No usar identificadores provisionales como `local_run`: seleccionar los `run_id`
 
 ## 8. Limitaciones y mejoras futuras
 
-- El dataset es académico; no permite afirmar que el modelo esté listo para uso clínico.
+- El dataset es académico; no confirma que el modelo esté listo para uso clínico.
 - La evaluación depende de la partición y del tamaño de la muestra; las pruebas sobre cinco folds tienen capacidad estadística limitada.
 - Se recomienda automatizar verificaciones de datos, fijar todas las versiones de paquetes, conservar hashes y artefactos, y monitorear el desempeño si se utilizaran nuevos datos.
 - Las métricas altas no eliminan el riesgo de falsos negativos.
