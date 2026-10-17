@@ -99,8 +99,6 @@ Para el informe, conservar evidencia de:
 4. **Artefactos y modelos:** curvas ROC, matrices de confusión, huella del dataset y URI del modelo; comprobar, cuando sea posible, que el modelo se puede cargar.
 5. **Trazabilidad:** fecha, versión del dataset, semilla y versiones de dependencias.
 
-Si se añadió la celda 9 de evidencias, esta puede generar `01_metricas.csv`, `02_parametros.csv`, `03_artefactos.csv`, `04_trazabilidad.csv` y `05_verificacion.json`, empaquetados en `Evidencias_MLflow_Actividad5.zip`. **Los archivos se generan solo al ejecutar esa celda con registros existentes.**
-
 No usar identificadores provisionales como `local_run`: seleccionar los `run_id` reales mediante `mlflow.search_runs()`.
 
 ## 7. Archivos y versionamiento
